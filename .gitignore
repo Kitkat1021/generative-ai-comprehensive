@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 .venv/
 venv/
+
+# Datasets — kept locally, too large / not meant for git history
+*.csv
+*.zip

@@ -1,0 +1,66 @@
+# ============================================================
+# requirements.txt — Data Science -> ML -> DL -> AI -> GenAI -> Deployment
+# Install with: python3 -m pip install -r requirements.txt
+# ============================================================
+
+# ---------------- Core Data Science ----------------
+numpy                # N-dimensional arrays & numerical computing, the base of almost every other library here
+pandas               # DataFrames — loading, cleaning, and manipulating tabular data
+scipy                # Scientific computing: stats, optimization, linear algebra, signal processing
+matplotlib           # Base plotting library for charts and visualizations
+seaborn              # Statistical plotting built on matplotlib (nicer defaults, easy heatmaps/distributions)
+plotly               # Interactive, browser-based charts (zoom/hover), useful for dashboards
+statsmodels          # Classical statistics: hypothesis testing, regression summaries, time series (ARIMA etc.)
+openpyxl             # Read/write .xlsx Excel files with pandas
+
+# ---------------- Machine Learning ----------------
+scikit-learn         # Classical ML: regression, classification, clustering, preprocessing, model evaluation
+xgboost              # Gradient boosting library, widely used for tabular data competitions/production
+lightgbm             # Faster gradient boosting, handles large datasets efficiently
+catboost             # Gradient boosting with strong native support for categorical features
+imbalanced-learn     # Techniques (SMOTE etc.) for handling imbalanced classification datasets
+joblib               # Save/load trained models, parallelize computations
+
+# ---------------- Natural Language Processing ----------------
+nltk                 # Classic text preprocessing: tokenization, stemming, stopwords, POS tagging
+spacy                # Production-grade NLP pipeline: tokenization, NER, dependency parsing
+# gensim             # Topic modeling (LDA) and classic word embeddings (Word2Vec) — DISABLED: not yet compatible with Python 3.14 (fails to build against the new CPython C API). Use Python 3.11/3.12 in a separate venv if you need this, or wait for an upstream fix.
+textblob             # Simple, beginner-friendly text processing (sentiment, noun phrases)
+
+# ---------------- Deep Learning ----------------
+torch                # PyTorch — deep learning framework (tensors, autograd, neural nets)
+torchvision           # Pretrained vision models & image transforms for PyTorch
+tensorflow           # TensorFlow deep learning framework (includes Keras as tf.keras)
+# tensorflow-metal   # OPTIONAL: enables GPU acceleration for TensorFlow on Apple Silicon Macs
+
+# ---------------- AI / GenAI / LLMs ----------------
+transformers          # Hugging Face pretrained models (BERT, GPT, etc.) for NLP/vision/multimodal tasks
+datasets              # Hugging Face library for loading/streaming ML datasets
+tokenizers            # Fast tokenizer implementations used by Hugging Face models
+sentence-transformers # Generate sentence/document embeddings for semantic search & similarity
+accelerate            # Simplifies running/training Hugging Face models across CPU/GPU/multi-GPU
+peft                  # Parameter-efficient fine-tuning of large models (e.g. LoRA) without full retraining
+diffusers             # Hugging Face library for diffusion models (e.g. Stable Diffusion image generation)
+langchain             # Framework for building LLM-powered apps (chains, agents, RAG pipelines)
+langchain-community   # Community-maintained integrations (vector stores, loaders, tools) for LangChain
+openai                # Official client for calling OpenAI's GPT models via API
+anthropic             # Official client for calling Anthropic's Claude models via API
+tiktoken              # Fast BPE tokenizer used to count/split tokens for OpenAI models
+faiss-cpu             # Facebook AI similarity search — fast vector similarity search for embeddings/RAG
+chromadb              # Lightweight vector database for storing/retrieving embeddings (RAG pipelines)
+
+# ---------------- Deployment / Serving ----------------
+fastapi              # Modern, fast API framework for serving ML models as REST endpoints
+uvicorn              # ASGI server used to run FastAPI apps
+flask                # Lightweight web framework, simple alternative to FastAPI for small services
+gunicorn             # Production-grade WSGI server for deploying Flask apps
+streamlit            # Quickly build interactive data/ML web apps with pure Python
+gradio               # Quickly build shareable web UIs/demos for ML models
+pydantic             # Data validation used by FastAPI for request/response schemas
+python-dotenv        # Load API keys/config from a .env file instead of hardcoding secrets
+
+# ---------------- Utilities ----------------
+requests             # Making HTTP requests (calling REST APIs, downloading data)
+tqdm                 # Progress bars for loops (training, data processing)
+jupyter              # Jupyter notebook/lab interface for running .ipynb files
+ipykernel            # Lets Jupyter/VSCode run this Python environment as a notebook kernel
